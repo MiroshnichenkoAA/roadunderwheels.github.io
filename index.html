@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Road under Wheels</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      defer
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/redux@4.0.5/dist/redux.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/react-redux@7.2.2/dist/react-redux.min.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/@reduxjs/toolkit@1.5.0/dist/redux-toolkit.umd.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/babel-standalone@6/babel.min.js%22%3E"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/formik@1.5.8/dist/formik.umd.production.js%22%3E"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__items">
+          <a href="!#" class="header__logo">
+            <img class="logo" src="images/logo.svg" alt="Drupal-coder" />
+          </a>
+          <button class="burger" type="button" id="navToggle">
+            <span class="burger__item">Menu</span>
+          </button>
+          <nav class="nav" id="nav">
+            <a href="!#" class="nav__item nonearrow">Автопарк</a>
+            <div class="nav__item nav__item--arrow">
+              <div class="arrow">Сервис</div>
+              <div class="def">
+                <div class="def__item"><a href="!#">Диагностика</a></div>
+                <div class="def__item"><a href="!#">Шиномонтаж</a></div>
+                <div class="def__item"><a href="!#">Гарантийное обслуживание</a></div>
+                <div class="def__item">
+                  <a href="!#">Car design</a>
+                </div>
+                <div class="def__item"><a href="!#">Custom</a></div>
+              </div>
+            </div>
+            <a href="!#" class="nav__item nonearrow">Отзывы</a>
+            <a href="!#" class="nav__item nonearrow">Контакты</a>
+            <div class="nav__item nav__item--arrow">
+              <div class="arrow">О нас</div>
+              <div class="def">
+                <div class="def__item"><a href="!#">Команда</a></div>
+        
+                <div class="def__item"><a href="!#">Новости</a></div>
+               
+              </div>
+            </div>
+            <a href="!#" class="nav__item nonearrow">+7(999) 123-23-23</a>
+            
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="react"></div>
+      <!-- Intro -->
+      <section class="intro">
+        <div class="intro__video">
+          <img
+            class="video"
+            src="images/background.gif"
+           
+          ></img>
+        </div>
+        
+        <div class="intro__items">
+          <div class="wrapper">
+            <div class="intro__items--container">
+              <div class="intro__entry">
+                <h1 class="entry__title">
+                  Ваш выбор - <br />
+                  это наш автомобиль
+                </h1>
+                <h5 class="entry__subtitle">
+                  Сопровождение и поддержка каждого клиента 
+                </h5>
+                <div class="div__intro-button">
+                  <button
+                    type="submit"
+                    class="intro__submit"
+                    id="sumbit__tariffs"
+                    data-scroll="#tariffs"
+                  >
+                    Каталог
+                  </button>
+                </div>
+              </div>
+
+              <div class="intro__progress">
+                <div class="progress__item">
+                  <div class="progress__title progress__title--size">
+                    #1
+                    
+                  </div>
+                  <p class="progress__subtitle">
+                    Автосалон по версии <br />
+                    журнала DRIVE2 <br />
+                  
+                  </p>
+                </div>
+
+                <div class="progress__item">
+                  <div class="progress__title">3</div>
+                  <div class="progress__subtitle">
+                    Года мы на рынке <br />
+                    автомобилей <br />
+                    3 лет
+                  </div>
+                </div>
+
+                <div class="progress__item">
+                  <div class="progress__title">%</div>
+                  <p class="progress__subtitle">
+                    Скидки до 50% с <br />
+                    клиентсокй картой
+                  </p>
+                </div>
+                <div class="progress__item">
+                  <div class="progress__title">20+</div>
+                  <p class="progress__subtitle">
+                    Различных марок <br />
+                    автомобилей мы <br />
+                    можем предложить <br />
+                    покупателям
+                  </p>
+                </div>
+                <div class="progress__item">
+                  <div class="progress__title">$</div>
+                  <p class="progress__subtitle">
+                    Подберем <br />
+                    автомобиль под <br />
+                    Ваш бюджет
+                  </p>
+                </div>
+                <div class="progress__item">
+                  <div class="progress__title">1000+</div>
+                  <p class="progress__subtitle">
+                    Автомобилей <br />
+                    обслужены <br />
+                    с гарантией в нашем <br />
+                    сервисе
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer -->
+      <section class="developer">
+        <div class="wrapper">
+          <h1 class="developer__title">
+            Совершенству нет <br />
+            предела! 
+          </h1>
+          <h2 class="developer__subtitle">
+            На протяжении 3х лет мы совешенствуем <br />
+            наш сервис
+          </h2>
+
+          <div class="developer__items">
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/1.svg"
+                  alt="developer-1"
+                />
+                
+              </div>
+              <div class="developer__img--subtitle">
+                Подбор новых <br />
+                автомобилей и <br />
+                автомобилей с<br />
+                пробегом
+              </div>
+            </div>
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/2.svg"
+                  alt="developer-1"
+                />
+               
+              </div>
+              <div class="developer__img--subtitle">
+                Оформление в <br />
+                рассрочку без <br />
+                переплат и <br />
+                первоночального <br />
+                взноса
+              </div>
+            </div>
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/3.svg"
+                  alt="developer-1"
+                />
+                
+              </div>
+              <div class="developer__img--subtitle">
+                Покупка автомобиля <br />
+                в Trade-In или по<br />
+                 льготной программе<br />
+              </div>
+            </div>
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/4.svg"
+                  alt="developer-1"
+                />
+                
+              </div>
+              <div class="developer__img--subtitle">
+                При покупке <br />
+                автомобиля <br />
+                дополнительное <br />
+                оборудование в <br />
+                подарок
+              </div>
+            </div>
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/5.svg"
+                  alt="developer-1"
+                />
+               
+              </div>
+              <div class="developer__img--subtitle">
+                Гарантия на любой <br />
+                автомобиль 2 года
+              </div>
+            </div>
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/6.svg"
+                  alt="developer-1"
+                />
+               
+              </div>
+              <div class="developer__img--subtitle">
+                Бесплатное<br />
+                 техническое <br />
+                 обслуживание в <br />
+                 течении 2 лет
+              </div>
+            </div>
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/7.svg"
+                  alt="developer-1"
+                />
+               
+              </div>
+              <div class="developer__img--subtitle">
+                Ремонт вашего<br />
+                 автомобиля  быстро <br />
+                 и качественно 
+              </div>
+            </div>
+            <div class="developer__item">
+              <div class="developer__images">
+                <img
+                  class="developer__img"
+                  src="images/developer/8.svg"
+                  alt="developer-1"
+                />
+                
+              </div>
+              <div class="developer__img--subtitle">
+                Гарантия на ремонт <br />
+                автомобиля 2 года
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+
+      
+
+      <!-- Tariffs-->
+      <section class="tariffs" id="tariffs">
+        <h1 class="tariffs__main--title">Акции</h1>
+        <div class="wrapper">
+          <div class="tariffs__items">
+            <div class="tariffs__item --nonehover">
+              <h3 class="tariffs__title">Mercedes CLS Coupe</h3>
+              <p>
+              <img
+                  class="tariffs__img"
+                  src="images/tariffs/m.png"
+                  
+                />
+                
+            </p>
+              <button class="tariffs__submit form-opener">
+                Оставьте заявку!
+              </button>
+            </div>
+
+            <div class="tariffs__item --nonehover">
+              <h3 class="tariffs__title">Porsche 911 Turbo S</h3>
+              <img
+                  class="tariffs__img"
+                  src="images/tariffs/911.png"
+                  alt="tariffs-1"
+                />
+              <div class="btn__tariffs">
+                <button class="tariffs__submit form-opener">
+                  Оставьте заявку!
+                </button>
+              </div>
+            </div>
+            <div class="tariffs__item --hover">
+              <h3 class="tariffs__title">Bentley Continental GT</h3>
+              <img
+                  class="tariffs__img"
+                  src="images/tariffs/gt.png"
+                  alt="tariffs-1"
+                />
+              <button class="tariffs__submit form-opener">
+                Оставьте заявку!
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Professional developer-->
+      <section class="professional__developers">
+        <div class="wrapper">
+          <h1 class="prod__title--main">
+            Льготные программы
+          </h1>
+
+          <div class="prod__items">
+            <div class="prod__item">
+              <div class="prod__images">
+                <img
+                  class="prod__img"
+                  src="images/Voscl.svg"
+                  alt="developer"
+                /><br />
+               
+                <div class="prod__title">"Первый автомобиль"</div>
+                <p class="prod__subtitle">
+                  Если дата выдачи <br />
+                  водительского <br />
+                  удостоверения не превышает<br />
+                   6 месяцев, мы предоставим<br />
+                    автомобиль в кредит <br />
+                    под низкий процент 
+                  
+                </p>
+              </div>
+            </div>
+            <div class="prod__item">
+              <div class="prod__images">
+                <img
+                  class="prod__img"
+                  src="images/Chel.svg"
+                  alt="developer" width="150px"
+                /><br />
+                
+                <h2 class="prod__title">“Семейный автомобиль”</h2>
+                <p class="prod__subtitle">
+                  Также мы предоставляем<br />
+                   автомобиль в кредит<br />
+                    под низкий процент <br />
+                    малоимущим и <br />
+                    многодетным семьям<br />
+                </p>
+              </div>
+            </div>
+            <div class="prod__item">
+              <div class="prod__images">
+                <img
+                  class="prod__img"
+                  src="images/PLUS.svg"
+                  alt="developer"
+                /><br />
+                
+                <h2 class="prod__title">“Медработник”</h2>
+                <p class="prod__subtitle">
+                  Всем медицинским работникам <br />
+                  предоставляется скидка <br />
+                  на всю продукцию<br />
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team-->
+      <section class="team">
+        <h1 class="team__title--main">Команда</h1>
+        <div class="wrapper">
+          <div class="team__items">
+            <div class="team__item">
+              <img src="images/team/team-1.png" alt="team" />
+              <h3 class="team__title">Мирошниченко А.А.</h3>
+              <p class="team__text">
+                Директор “Road under Wheels”
+              </p>
+            </div>
+            <div class="team__item">
+              <img src="images/team/team-2.png" alt="team" />
+              <h3 class="team__title">Пукин В.В.</h3>
+              <p class="team__text">
+                Промоутер “Road under Wheels”
+              </p>
+            </div>
+            <div class="team__item">
+              <img src="images/team/team-3.png" alt="team" />
+              <h3 class="team__title">Зверев А.В.</h3>
+              <p class="team__text">
+                Рама 3 на 8 “Road under Wheels”
+              </p>
+            </div>
+          <div class="team__button">
+            <button type="submit" class="team__submit">Вся команда</button>
+          </div>
+        </div>
+      </section>
+
+      <!--Last Cases-->
+      <section class="lastCases">
+        <h1 class="lastCases__title--main">Новости</h1>
+        <div class="wrapper">
+          <div class="lastCases__items">
+            <a href="!#" class="lastCases__item">
+              <img
+                class="lastCases__img --small"
+                src="images/lastCases/supra.svg"
+                alt="Last-Cases"
+              />
+              <div class="lastCases__text--none">
+                <h4 class="lastCases__subtitle">
+
+                </h4>
+                <h6 class="lastCases__date">22.04.2019</h6>
+                <p class="lastCases__text">
+                  Благодаря нашим партнерам<br />
+                   мы теперь продаем и обслуживаем <br />
+                   новую Toyota Supra
+                </p>
+              </div>
+            </a>
+
+            <a href="!#" class="lastCases__item">
+              <img
+                class="lastCases__img --big"
+                src="images/lastCases/bmw.svg"
+                alt="Last-Cases"
+              />
+              <div class="lastCases_img--text">
+                <h4 class="lastCases__subtitle --white">
+                  Новые BMW x7 уже у нас
+                </h4>
+              </div>
+            </a>
+            <a href="!#" class="lastCases__item">
+              <img
+                class="lastCases__img -default"
+                src="images/lastCases/lancer.svg"
+                alt="Last-Cases"
+              />
+              <div class="lastCases_img--text">
+                <h4 class="lastCases__subtitle --white">
+                  Готовые решения для любителей побыстрей
+                </h4>
+                <h6 class="lastCases__date --white">22.04.2019</h6>
+              </div>
+            </a>
+            <a href="!#" class="lastCases__item">
+              <img
+                class="lastCases__img -default"
+                src="images/lastCases/hyn.svg"
+                alt="Last-Cases"
+              />
+              <div class="lastCases_img--text">
+                <h4 class="lastCases__subtitle --white">
+                  Hynday Genesis - редкий автомобиль с необычным дизайном
+                </h4>
+                <h6 class="lastCases__date --white">22.04.2019</h6>
+              </div>
+            </a>
+            <a href="!#" class="lastCases__item">
+              <img
+                class="lastCases__img --small"
+                src="images/lastCases/moh.svg"
+                alt="Last-Cases"
+              />
+              <div class="lastCases__text--none">
+                <h4 class="lastCases__subtitle">
+                  Брутальный семьянин уже в нашем автопарке
+                </h4>
+                <h6 class="lastCases__date">22.04.2019</h6>
+                <p class="lastCases__text">
+                  Эти слова совершенно справедливы, <br />
+                  однако гипнотический рифф продолжает <br />
+                  паузный пласт.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews-->
+      <section class="reviews --background">
+        <h1 class="reviews__title--main">Отзывы</h1>
+        <div class="wrapper">
+          <div class="review__background">
+            <div class="review_block">
+              <div class="review_slider">
+                <div class="review_slide">
+                  <div class="review_title">Сергей Брезицкий, бизнесмен</div>
+                  <div class="review_text">
+                    Я был просто поражен компетентностью и отзывчивостью персонала! Подобрали лучший автомобиль!
+                  </div>
+                  
+                </div>
+                <div class="review_slide">
+                  <div class="review_title">Александр Кутернега, гонщик F1</div>
+                  <div class="review_text">
+                    Road under Wheels смогли подобрать такой автомобиль, на котором я испытываю те же чувства, что и на настоящем болиде.
+                  </div>
+                 
+                </div>
+                <div class="review_slide">
+                  <div class="review_title">Здесь мог бы быть Ваш отзыв</div>
+                  
+                  
+                </div>
+                <div class="review_slide">
+                  <div class="review_title">Здесь мог бы быть Ваш отзыв</div>
+                  
+                </div>
+                <div class="review_slide">
+                  <div class="review_title">Здесь мог бы быть Ваш отзыв</div>
+                </div>
+                <div class="review_slide">
+                  <div class="review_title">Здесь мог бы быть Ваш отзыв</div>
+                </div>
+                <div class="review_slide">
+                  <div class="review_title">Здесь мог бы быть Ваш отзыв</div>
+                </div>
+                <div class="review_slide">
+                  <div class="review_title">Здесь мог бы быть Ваш отзыв</div>
+                </div>
+              </div>
+              <div class="review-arrow-block">
+                <button id="review_prev"></button>
+                <div class="review_display">
+                  <span id="review_number">01</span> / 08
+                </div>
+                <button id="review_next"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Firms-->
+      <section class="firms">
+        <h1 class="firms__title">Наши партнеры</h1>
+        <h2 class="firms__subtitle">
+          Сотрудничество и взаимная связь с другими компаниями помогает нам улучшить качество о обслуживания
+        </h2>
+        <div class="firms__sliders">
+          <div class="firms__slider" id="slider-1">
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-1.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-2.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-3.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-4.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-2.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-1.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-5.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-6.png" alt="firms" /></div>
+            </div>
+          </div>
+          <div class="firms__slider" id="slider-2">
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-2.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-3.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-1.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-6.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-4.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-3.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-1.png" alt="firms" /></div>
+            </div>
+            <div class="firms__slide">
+              <div><img src="images/reviews/reviews-5.png" alt="firms" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ-->
+      <section class="faq">
+        <div class="wrapper">
+          <h2 class="faq__title">Faq</h2>
+          <div class="faq_prompt">
+            <div class="promt__div">
+              <h3 class="promt__text">
+                <span class="faq_number">1.</span>Время работы автосалона.
+              </h3>
+              <p class="promt__subtext">
+                С 8:00-20:00 без выходных.
+              </p>
+            </div>
+            <div class="promt__div">
+              <h3 class="promt__text">
+                <span class="faq_number">2.</span>Условия льготных программ.
+              </h3>
+              <p class="promt__subtext">
+                Если Вы относитесь к одной из категорий указанных в разделе "Льготные программы", Вам необходимо предоставить документ подтверждающий Вашу принадлежность к одной (или нескольким) категориям.
+              </p>
+            </div>
+            <div class="promt__div">
+              <h3 class="promt__text">
+                <span class="faq_number">3.</span>Что делать в случае поломки автомобиля из нашего салона?
+              </h3>
+              <p class="promt__subtext">
+                Все автомобили и запчасти нашей фирмы имеют гарантию, и ремонт или полная замена авто будет выполнена немедленно.
+              </p>
+            </div>
+            <div class="promt__div">
+              <h3 class="promt__text">
+                <span class="faq_number">4.</span>Как восстановить истекшую гаранию?
+              </h3>
+              <p class="promt__subtext">
+                После покупки авто действует гарантия 2 года. Но по истечению этого срока вы можете восстановить гарантию на 1 год всего лишь пройдя ТО в одном из наших сервисов.
+              </p>
+            </div>
+          
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer-block">
+      <div class="wrapper">
+        <div id="footer-phrase">
+          <div class="footer__wrapper">
+            <div class="connect-wrapper">
+              <div class="connect-title">
+                Оставить заявку на </br>
+                подбор автомобиля
+              </div>
+              <div class="connect-description">
+                Срочно нужен автомобиль? Тогда Вам точно к нам! Наша команда подберет его в срок и под Ваш бюджет.  Просто оставьте заявку и наш менеджер с вами свяжется!
+              </div>
+              <div class="connect-contacts">
+                <ul>
+                  <li class="contacts-phone">
+                    <a href="">+7(999) 123-23-23</a>
+                  </li>
+                  <li class="contacts-email">
+                    <a href="">info@roadunderwheels.ru</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-block">
+              <form
+                id="footer-form"
+                action="https://formcarry.com/s/BhW6BYBtdi"
+                method="POST"
+              >
+                <input
+                  name="footer-name"
+                  id="footer-name"
+                  type="text"
+                  class="footer-block-input"
+                  placeholder="Ваше имя"
+                />
+                <input
+                  name="footer-number"
+                  id="footer-number"
+                  type="text"
+                  class="footer-block-input"
+                  placeholder="Телефон"
+                />
+                <input
+                  name="footer-email"
+                  id="footer-email"
+                  type="email"
+                  class="footer-block-input"
+                  placeholder="E-mail"
+                />
+                <textarea
+                  name="footer-message"
+                  id="footer-message"
+                  placeholder="Ваш комментарий"
+                  class="footer-block-input"
+                ></textarea>
+                <label for="footer-policy" class="footer-chb-block">
+                  <input
+                    name="footer-policy"
+                    type="checkbox"
+                    class="footer-chb"
+                    id="footer-policy"
+                  />
+
+                  <span class="footer-chb-place"></span>
+                  <em>
+                    <span class="footer-checkbox-text"
+                      >Отправляя заявку, я даю согласие на
+                      <a href="">обработку своих персональных данных</a>.
+                    </span>
+                  </em>
+                </label>
+                <div id="footer-recaptcha-store">
+                  <div
+                    id="footer-recaptcha"
+                    class="g-recaptcha"
+                    data-sitekey="6LesZTAaAAAAAENvkVmnCuOhPbCmr8wyVcery-wM"
+                    data-theme="dark"
+                    data-callback="captchaCallback"
+                    data-expired-callback="captchaCallback"
+                  ></div>
+                </div>
+                <input
+                  id="sendButton"
+                  type="submit"
+                  class="footer-contact-button"
+                  value="СВЯЖИТЕСЬ С НАМИ"
+                  disabled
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="socialnetwork-block-wrapper">
+          <div class="socialnetwork-block">
+            <div class="footer-links-wrapper">
+              <ul class="footer-links">
+                <li class="footer-pic facebook">
+                  <a href=""
+                    ><img src="images/footer/footer-5.png" alt="Facebook"
+                  /></a>
+                </li>
+                <li class="footer-pic vkontakte">
+                  <a href=""
+                    ><img src="images/footer/footer-6.png" alt="VK"
+                  /></a>
+                </li>
+                <li class="footer-pic telegram">
+                  <a href=""
+                    ><img src="images/footer/footer-7.png" alt="Telegram"
+                  /></a>
+                </li>
+                <li class="footer-pic youtube">
+                  <a href=""
+                    ><img src="images/footer/footer-8.png" alt="Youtube"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <p class="footer__subtitle">
+              Проект ООО «КубГУ», Краснодар, Россия.
+              <br />
+              Road under Wheels является зарегистрированной торговой маркой. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="form.js"></script>
+  </body>
+</html>
